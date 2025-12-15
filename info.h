@@ -39,7 +39,7 @@ double cpuUsage(const CpuStat& a, const CpuStat& b) {
     return (1.0 - (double)idleDiff / totalDiff) * 100.0;
 }
 
-
+//cpuload
 void printCPULoad(double cpu) {
     int bars = cpu / 5;
     std::cout <<"Cpu Load : ";
