@@ -21,10 +21,11 @@ int wait_open(const char* name, int flags) {
             cout << "⏳ Waiting for queue " << name << "...\n";
             sleep(1);
             continue;
-        }
+        }else 
+               break;
+     }
+ return mq;
 
-    }
-return mq;
 }
 
 
