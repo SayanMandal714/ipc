@@ -7,7 +7,7 @@
 #include <unistd.h>
 using namespace std;
 
-struct TaskQ { // For message queue
+struct TaskQ { 
     int priority;
     int ind;
     bool cs;
