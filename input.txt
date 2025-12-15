@@ -14,5 +14,6 @@ Fibonacci 10
 File 500 true
 Palindrome madam
 HeavyCPU 50000000 1 true
+Reverse dne***start.....hello_world*****end..trats true
 end
 
