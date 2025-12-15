@@ -18,7 +18,7 @@ inline void clearScreen() {
 }
 
 inline void slowRefresh(int ms=0) {
-    std::this_thread::sleep_for(std::chrono::milliseconds(0));
+    std::this_thread::sleep_for(std::chrono::milliseconds(ms));
 }
 inline void printHeader(const std::string& title) {
     std::cout << "\n========================================================\n";
