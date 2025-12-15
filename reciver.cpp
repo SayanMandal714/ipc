@@ -5,8 +5,7 @@
 #include "PThreadPool.h"
 #include "Taskq.h"
 #include "print.h"
-#include "taskf.h"
-#include "info.h"
+#include "taskf.h"
 
 using namespace std;
 
