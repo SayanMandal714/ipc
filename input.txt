@@ -1,6 +1,6 @@
 Compute  45*78 0
 Compute  4*8  true
-Compute 45*78
+Compute 45/7 true
 Process file_chunk_12 
 Process critical_stage 0 true
 Reverse hello_world
@@ -9,7 +9,8 @@ Reverse hello_world r
 Prime 29
 Compute 999*888 2 true
 Prime 99991 40 true
-Factorial 6
+Factorial 8
+Compute 999*888/100 2 true
 Fibonacci 10
 File 500 true
 Palindrome madam
