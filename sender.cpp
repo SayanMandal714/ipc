@@ -176,7 +176,7 @@ if (failMq == -1) {
             globalTaskId++;
         }
 
-        while (!taskMap.empty()) {
+        while (!taskMap.empty()){
 
             fail fm{};
             ssize_t r = smq_receive(failMq,(char*)&fm,sizeof(fm));
@@ -191,12 +191,12 @@ if (failMq == -1) {
 
             if (fm.f) {
                 it->second.failCount++;
-                if (it->second.failCount > 2)
-                    taskMap.erase(it);
+                if (it->second.failCount > 2){
+                 cout << "❌ Task " << fm.id << " DROPPED\n";
+                    taskMap.erase(it);}
                 else
                     smq_send(sendMq,(char*)&it->second.task,sizeof(TaskQ));
             } else {
-                 lock_guard<mutex> lk(printMutex());
                 cout << "✅ Task " << fm.id << " completed\n";
                 taskMap.erase(it);
             }
@@ -208,10 +208,9 @@ if (failMq == -1) {
             break;
         }
     }
-
-    mq_close(sendMq);
     mq_close(failMq);
-    mq_close(endMq);
+   mq_close(endMq);
+    mq_close(sendMq);
         cout << "Sender exited cleanly\n";
         return 0;
 }
