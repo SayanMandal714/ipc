@@ -6,7 +6,7 @@
 #include "Taskq.h"
 #include "print.h"
 #include "taskf.h"
-
+#include "info.h"
 
 using namespace std;
 
@@ -24,6 +24,7 @@ int wait_open(const char* name, int flags) {
         }
     }
 }
+
 
 
 
@@ -55,8 +56,12 @@ int main() {
         if (er > 0 && string(endbuf) == "__end__") {
             slowRefresh(150);
             cout << "\n🛑 Receiver shutting down...\n";
+            mq_unlink("/sendmsg");
+            mq_unlink("/fail");
+            mq_unlink("/res");
             break;
         }
+        
 
         /* 🔹 RECEIVE TASK */
         TaskQ msg;
