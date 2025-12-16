@@ -12,7 +12,7 @@
 mqd_t smq_open(const char* name,int flags,mode_t mode = 0666,mq_attr* attr = nullptr)
 {
     mqd_t mq = mq_open(name, flags, mode, attr);
-
+ 
  if (mq == -1) {
         switch (errno) {
             case EACCES:
