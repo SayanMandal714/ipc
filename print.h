@@ -13,6 +13,7 @@ inline std::mutex& printMutex() {
     return m;
 }
 
+
 inline void clearScreen() {
     std::cout << "\033[2J\033[H";   // ANSI clear + cursor home
 }
@@ -71,4 +72,3 @@ inline void printBar(const std::string& label,
 }
 
 #endif
-
