@@ -16,7 +16,7 @@
 #include <unistd.h>
 #include <sys/syscall.h>
 #include <atomic>
-#include  "cput.h" 
+#include  "cput.h"
 
 
 struct TaskQ;
@@ -189,10 +189,14 @@ try {
  int working = workingThreads.load();
     int waiting = size - working;
     int queued  = pq.size();
-
+ {   
+lock_guard<mutex> lk(printMutex());
+printSection("Thread at the exicuting time");
     cout<<"Working"<< working<< "/"<< size<<endl;
     cout<<"Waiting"<<waiting<<"/"<<size<<endl;
     cout<<"Queued"<<queued<<"/"<<10<<endl;
+    printFooter();
+ }
 
 task.func();
 workingThreads--;
