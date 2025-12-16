@@ -33,3 +33,4 @@ inline double threadCpuMs(const ThreadCpuTime& start,
 }
 
 #endif // CPUT_H
+
