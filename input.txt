@@ -1,20 +1,17 @@
-Compute  45*78 0
+Compute  45*78 0 true
 Compute  4*8  true
-Compute 45/7 true
+Compute 45*78 true
 Process file_chunk_12 
 Process critical_stage 0 true
-Reverse hello_world
-Vowel operating_systems
-Reverse hello_world r
+Reverse hello_world true
+Vowel operating_systems true
+Reverse hello_world r true
 Prime 29
 Compute 999*888 2 true
 Prime 99991 40 true
-Factorial 8
-Compute 999*888/100 2 true
-Fibonacci 10
+Factorial 6
+Fibonacci 10 true
 File 500 true
 Palindrome madam
 HeavyCPU 50000000 1 true
-Reverse dne***start.....hello_world*****end..trats true
 end
-
