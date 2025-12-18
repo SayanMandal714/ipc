@@ -11,7 +11,7 @@
 inline std::mutex& printMutex() {
     static std::mutex m;
     return m;
-}
+} 
 
 
 inline void clearScreen() {
